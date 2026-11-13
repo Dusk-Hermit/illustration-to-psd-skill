@@ -18,6 +18,8 @@ Use the displayed image after EXIF orientation. Coordinates run from 0 to 1000 o
 
 Use `background` for the canvas default, `environment` for scenery, `subject` for hair/clothes/props, `skin` for exposed skin, `accessory` for small accents, and `dark` for small dark objects that need finer regions. Each material needs visible pixels. `k` is the number of Lab color clusters. Start around 3–6 for nearly flat material and 8–14 for material with several visible colors. Lower it if similar shades fragment into many unnecessary shapes.
 
+Split objects with different base colors even if they share a role. For example, use separate entries for two faces or two differently colored controllers because each entry receives one base color. For glass and other transparent objects, trace the visible shapes through the glass where they affect the composition. Treat the rim or reflections separately. One opaque base over the whole surface will hide those shapes in the base-stage preview.
+
 | Stage | Repainting technique |
 | --- | --- |
 | Background and environment bases | Large opaque round brush or lasso fill |
